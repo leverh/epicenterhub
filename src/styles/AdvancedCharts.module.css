@@ -1,0 +1,409 @@
+.advancedChart {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.advancedChart:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.12);
+}
+
+.chartHeader {
+  margin-bottom: 1.5rem;
+}
+
+.chartHeader h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.chartDescription {
+  color: #718096;
+  font-size: 1.3rem;
+}
+
+.chartContainer {
+  flex: 1;
+  position: relative;
+  min-height: 35rem;
+}
+
+.apexChart {
+  height: 100% !important;
+}
+
+.chartFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 0.1rem solid #e2e8f0;
+}
+
+.chartMetric {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
+}
+
+.metricLabel {
+  font-size: 1.3rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.metricValue {
+  font-size: 1.8rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.noDataMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  color: #a0aec0;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Insight blocks for heatmap */
+.insightBlocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.insightBlock {
+  background-color: #f8fafc;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  border: 0.1rem solid #e2e8f0;
+}
+
+.insightTitle {
+  font-size: 1.4rem;
+  color: #718096;
+  margin: 0 0 0.8rem 0;
+}
+
+.insightValue {
+  font-size: 1.6rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.insightDesc {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+/* Legend styles */
+.customLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+}
+
+.legendColor {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.legendLabel {
+  font-size: 1.3rem;
+  color: #718096;
+}
+
+/* D3 specific styles */
+.d3Container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.d3Container svg {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 350px;
+}
+
+.d3Container text {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 1.2rem;
+}
+
+.d3Container .axis-label {
+  font-weight: 500;
+  fill: #4a5568;
+}
+
+.d3Container .bar {
+  transition: fill 0.2s;
+}
+
+.d3Container .bar:hover {
+  fill: #3182ce;
+}
+
+.d3Container .tooltip {
+  position: absolute;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  font-size: 1.3rem;
+  z-index: 10;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* ChartJS specific styles */
+.pieContainer {
+  position: relative;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.pieCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.pieCenterTitle {
+  font-size: 1.4rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.pieCenterValue {
+  font-size: 2.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+/* MEDIA QUERIES */
+/* Extra small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .advancedChart {
+    padding: 1.5rem;
+  }
+  
+  .chartHeader h3 {
+    font-size: 1.6rem;
+  }
+  
+  .chartDescription {
+    font-size: 1.2rem;
+  }
+  
+  .chartContainer {
+    min-height: 30rem;
+  }
+  
+  .chartFooter {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .insightBlocks {
+    grid-template-columns: 1fr;
+  }
+  
+  .d3Container svg {
+    max-height: 250px;
+  }
+  
+  .metricValue {
+    font-size: 1.6rem;
+  }
+  
+  .insightBlock {
+    padding: 1.2rem;
+  }
+}
+
+/* Small devices (tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .chartFooter {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .insightBlocks {
+    grid-template-columns: 1fr;
+  }
+  
+  .d3Container svg {
+    max-height: 300px;
+  }
+}
+
+/* Medium devices (tablets and small laptops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chartFooter {
+    flex-wrap: wrap;
+  }
+  
+  .chartMetric {
+    flex: 0 0 50%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .insightBlocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (laptops and desktops, 1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .chartContainer {
+    min-height: 40rem;
+  }
+  
+  .chartMetric {
+    padding: 0 1rem;
+  }
+  
+  .insightBlocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops, 1441px and up) */
+@media (min-width: 1441px) {
+  .chartContainer {
+    min-height: 45rem;
+  }
+  
+  .pieContainer {
+    max-width: 45rem;
+  }
+  
+  .insightBlocks {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .chartMetric {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 726px) {
+  .advancedChart {
+    max-width: calc(100vw - 4rem);
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+  }
+  
+  .chartContainer {
+    overflow: hidden;
+    padding: 0.5rem;
+  }
+  
+  .chartFooter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .chartMetric {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 726px) {
+  .advancedChartsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .advancedSection {
+    padding: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .advancedChart {
+    background-color: #1a202c;
+  }
+  
+  .chartHeader h3 {
+    color: #e2e8f0;
+  }
+  
+  .chartDescription {
+    color: #a0aec0;
+  }
+  
+  .metricValue {
+    color: #e2e8f0;
+  }
+  
+  .chartFooter {
+    border-top-color: #2d3748;
+  }
+  
+  .insightBlock {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .insightValue {
+    color: #e2e8f0;
+  }
+  
+  .insightTitle {
+    color: #a0aec0;
+  }
+  
+  .d3Container text {
+    fill: #e2e8f0;
+  }
+  
+  .d3Container .axis-label {
+    fill: #a0aec0;
+  }
+  
+  .d3Container .tooltip {
+    background: rgba(45, 55, 72, 0.95);
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .pieCenterTitle {
+    color: #a0aec0;
+  }
+  
+  .pieCenterValue {
+    color: #e2e8f0;
+  }
+}

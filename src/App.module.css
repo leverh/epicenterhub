@@ -1,0 +1,186 @@
+.toggleButton {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.toggleButton:hover {
+  background-color: #3182ce;
+}
+
+.refreshButton {
+  background-color: transparent;
+  border: 0.1rem solid #cbd5e0;
+  color: #4a5568;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refreshButton:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+.retryButton {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #c53030;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+/* Advanced Charts Layout */
+.advancedChartsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.singleChartContainer {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chartTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chartTab {
+  padding: 0.6rem 1.2rem;
+  background-color: #f7fafc;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chartTab:hover {
+  background-color: #edf2f7;
+}
+
+.activeTab {
+  background-color: #ebf8ff;
+  border-color: #90cdf4;
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+header {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: #718096;
+  font-size: 1.4rem;
+  padding: 2rem;
+  border-top: 0.1rem solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerBottom {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.portfolioLink {
+  color: #4299e1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.portfolioLink:hover {
+  color: #3182ce;
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+@media (prefers-color-scheme: dark) {
+  .portfolioLink {
+    color: #63b3ed;
+  }
+  
+  .portfolioLink:hover {
+    color: #90cdf4;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .footerBottom {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .advancedChartsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advancedChartsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .advancedChartsGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

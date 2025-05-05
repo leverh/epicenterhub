@@ -1,0 +1,238 @@
+.panel {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.panel h2 {
+  color: #2d3748;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  border-bottom: 0.2rem solid #e2e8f0;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.chart {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #e2e8f0;
+}
+
+.chart:last-child {
+  margin-bottom: 0;
+}
+
+.chart h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.chartDescription {
+  color: #718096;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom tooltip styles */
+.customTooltip {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  max-width: 24rem;
+}
+
+.tooltipLabel {
+  font-size: 1.4rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin: 0 0 0.8rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.1rem solid #e2e8f0;
+}
+
+.tooltipValue {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.tooltipValue span {
+  color: #718096;
+}
+
+.tooltipValue strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.tooltipDescription {
+  font-size: 1.2rem;
+  color: #718096;
+  margin: 0.5rem 0 0 0;
+  font-style: italic;
+}
+
+/* Pie chart styles */
+.pieChartCenter {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.pieChartValue {
+  font-size: 1.3rem;
+}
+
+/* Chart grid layout */
+.chartGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Summary metrics */
+.chartInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.infoItem {
+  background-color: #f8fafc;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 0.1rem solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.infoItem:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.05);
+}
+
+.infoItem h4 {
+  font-size: 1.4rem;
+  color: #718096;
+  margin: 0 0 1rem 0;
+  font-weight: normal;
+}
+
+.infoValue {
+  font-size: 2.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.refreshIndicator {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #48bb78;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  position: relative;
+}
+
+.refreshIndicator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: #48bb78;
+  opacity: 0.4;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .chartGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .chartInfo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Recharts default tooltip customization */
+:global(.recharts-default-tooltip) {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 0.1rem solid #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem !important;
+}
+
+:global(.recharts-tooltip-label) {
+  color: #2d3748 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .panel {
+    background-color: #1a202c;
+    border-color: #2d3748;
+  }
+  
+  .panel h2 {
+    color: #f7fafc;
+    border-bottom-color: #2d3748;
+  }
+  
+  .chart {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .chart h3 {
+    color: #e2e8f0;
+  }
+  
+  .chartDescription {
+    color: #a0aec0;
+  }
+  
+  .infoItem {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .infoItem h4 {
+    color: #a0aec0;
+  }
+  
+  .infoValue {
+    color: #e2e8f0;
+  }
+}
