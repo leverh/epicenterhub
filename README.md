@@ -14,7 +14,7 @@
 
 ## Overview
 
-EpicenterHub transforms complex seismic data into intuitive visualizations, providing real-time insights into global earthquake activity. Built using USGS data feeds, this dashboard demonstrates modern data visualization techniques and responsive design principles.
+EpicenterHub transforms complex seismic data into visualizations, providing real-time insights into global earthquake activity. This dashboard demonstrates data visualization techniques and is built using USGS data feeds.
 
 ## Screenshots
 
