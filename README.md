@@ -8,7 +8,7 @@
 [![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF?logo=vite)](https://vitejs.dev)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[Live Demo](https://earthquake-dashboard.vercel.app) | [Features](#features) | [Tech Stack](#tech-stack) | [Getting Started](#getting-started)
+[Live Demo](https://extraordinary-maamoul-73fb24.netlify.app/) | [Features](#features) | [Tech Stack](#tech-stack) | [Getting Started](#getting-started)
 
 </div>
 
