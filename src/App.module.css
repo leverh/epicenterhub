@@ -100,6 +100,14 @@
   font-weight: 500;
 }
 
+.headerTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
 header {
   text-align: center;
   margin-top: 3rem;
@@ -137,6 +145,54 @@ header {
 .portfolioLink:hover {
   color: #3182ce;
   text-decoration: underline;
+}
+
+/* Dark mode */
+
+.container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f7fafc);
+  color: var(--color-text, #2d3748);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filtersPanel,
+.mapPanel,
+.dashboardSection,
+.advancedSection {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.dashboardTitle {
+  color: var(--color-text, #2d3748);
+}
+
+.subtitle {
+  color: var(--color-text-secondary, #4a5568);
+}
+
+.footer {
+  color: var(--color-text-tertiary, #718096);
+  border-top-color: var(--color-border, #e2e8f0);
+}
+
+/* Filter panel */
+.statsRow {
+  background-color: var(--color-bg-card, #ffffff);
+}
+
+.statCard {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.statValue {
+  color: var(--color-text, #2d3748);
+}
+
+.statLabel {
+  color: var(--color-text-secondary, #4a5568);
 }
 
 /* MEDIA QUERIES */

@@ -33,6 +33,7 @@ EpicenterHub transforms complex seismic data into intuitive visualizations, prov
 🔄 **Real-time Updates**: Automatic refresh every 60 seconds from USGS API  
 🗺️ **Interactive Mapping**: Leaflet-powered visualization with color-coded depth indicators  
 📊 **Multi-library Charts**: Leveraging the strengths of D3.js, Chart.js, and ApexCharts  
+🎨 **Dark Mode**: System preference-aware theme switching  
 📱 **Responsive Design**: Fluid layouts from mobile to 4K displays  
 ⚡ **Performance**: Optimized with React hooks and CSS modules  
 

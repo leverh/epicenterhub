@@ -486,59 +486,58 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #f7fafc;
-    --color-text-secondary: #e2e8f0;
-    --color-text-tertiary: #a0aec0;
-    
-    --color-bg: #171923;
-    --color-bg-card: #1a202c;
-    --color-border: #2d3748;
-    --color-border-light: #4a5568;
-    
-    --color-primary-bg: rgba(66, 153, 225, 0.15);
-    --color-success-bg: rgba(56, 161, 105, 0.15);
-    --color-warning-bg: rgba(236, 201, 75, 0.15);
-    --color-danger-bg: rgba(229, 62, 62, 0.15);
-  }
+/* Dark mode */
+
+:root.dark {
+  --color-text: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-tertiary: #a0aec0;
   
-  body {
-    background-color: var(--color-bg);
-  }
+  --color-bg: #171923;
+  --color-bg-card: #1a202c;
+  --color-border: #2d3748;
+  --color-border-light: #4a5568;
   
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="search"],
-  select,
-  textarea {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    border-color: var(--color-border);
-  }
-  
-  input[type="checkbox"] {
-    background-color: var(--color-bg);
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--color-bg);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--color-border);
-    border: 3px solid var(--color-bg);
-  }
-  
-  .btn-outline {
-    border-color: var(--color-border);
-    color: var(--color-text-secondary);
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--color-border);
-    color: var(--color-text);
-  }
+  --color-primary-bg: rgba(66, 153, 225, 0.15);
+  --color-success-bg: rgba(56, 161, 105, 0.15);
+  --color-warning-bg: rgba(236, 201, 75, 0.15);
+  --color-danger-bg: rgba(229, 62, 62, 0.15);
+}
+
+body.dark {
+  background-color: var(--color-bg);
+}
+
+:root.dark input[type="text"],
+:root.dark input[type="number"],
+:root.dark input[type="email"],
+:root.dark input[type="search"],
+:root.dark select,
+:root.dark textarea {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+:root.dark input[type="checkbox"] {
+  background-color: var(--color-bg);
+}
+
+:root.dark ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+:root.dark ::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border: 3px solid var(--color-bg);
+}
+
+:root.dark .btn-outline {
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+:root.dark .btn-outline:hover {
+  background-color: var(--color-border);
+  color: var(--color-text);
 }

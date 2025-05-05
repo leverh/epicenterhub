@@ -229,3 +229,25 @@
   color: #718096;
   font-style: italic;
 }
+
+/* Dark mode */
+.controls {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.controls h2 {
+  color: var(--color-text, #2d3748);
+}
+
+.group label {
+  color: var(--color-text-secondary, #4a5568);
+}
+
+.checkboxContainer label {
+  color: var(--color-text-secondary, #4a5568);
+}
+
+.checkboxContainer label:hover {
+  color: var(--color-primary, #2b6cb0);
+}

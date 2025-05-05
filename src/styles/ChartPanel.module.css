@@ -198,41 +198,20 @@
   margin-bottom: 0.5rem !important;
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .panel {
-    background-color: #1a202c;
-    border-color: #2d3748;
-  }
-  
-  .panel h2 {
-    color: #f7fafc;
-    border-bottom-color: #2d3748;
-  }
-  
-  .chart {
-    background-color: #2d3748;
-    border-color: #4a5568;
-  }
-  
-  .chart h3 {
-    color: #e2e8f0;
-  }
-  
-  .chartDescription {
-    color: #a0aec0;
-  }
-  
-  .infoItem {
-    background-color: #2d3748;
-    border-color: #4a5568;
-  }
-  
-  .infoItem h4 {
-    color: #a0aec0;
-  }
-  
-  .infoValue {
-    color: #e2e8f0;
-  }
+/* Dark mode */
+.panel {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.panel h2 {
+  color: var(--color-text, #2d3748);
+}
+
+.panel h3 {
+  color: var(--color-text-secondary, #4a5568);
+}
+
+.chartDescription {
+  color: var(--color-text-tertiary, #718096);
 }

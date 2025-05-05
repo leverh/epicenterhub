@@ -157,6 +157,16 @@
   font-style: italic;
 }
 
+/* Dark mode */
+.mapContainer {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.mapContainer h2 {
+  color: var(--color-text, #2d3748);
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .legendContainer {

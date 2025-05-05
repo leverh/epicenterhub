@@ -350,60 +350,24 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .advancedChart {
-    background-color: #1a202c;
-  }
-  
-  .chartHeader h3 {
-    color: #e2e8f0;
-  }
-  
-  .chartDescription {
-    color: #a0aec0;
-  }
-  
-  .metricValue {
-    color: #e2e8f0;
-  }
-  
-  .chartFooter {
-    border-top-color: #2d3748;
-  }
-  
-  .insightBlock {
-    background-color: #2d3748;
-    border-color: #4a5568;
-  }
-  
-  .insightValue {
-    color: #e2e8f0;
-  }
-  
-  .insightTitle {
-    color: #a0aec0;
-  }
-  
-  .d3Container text {
-    fill: #e2e8f0;
-  }
-  
-  .d3Container .axis-label {
-    fill: #a0aec0;
-  }
-  
-  .d3Container .tooltip {
-    background: rgba(45, 55, 72, 0.95);
-    border-color: #4a5568;
-    color: #e2e8f0;
-  }
-  
-  .pieCenterTitle {
-    color: #a0aec0;
-  }
-  
-  .pieCenterValue {
-    color: #e2e8f0;
-  }
+/* Dark mode */
+.advancedChart {
+  background-color: var(--color-bg-card, #ffffff);
+  transition: background-color 0.3s ease;
+}
+
+.chartHeader h3 {
+  color: var(--color-text, #2d3748);
+}
+
+.chartDescription {
+  color: var(--color-text-tertiary, #718096);
+}
+
+.metricValue {
+  color: var(--color-text, #2d3748);
+}
+
+.metricLabel {
+  color: var(--color-text-tertiary, #718096);
 }

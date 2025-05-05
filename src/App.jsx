@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useEarthquakeData } from './hooks/useEarthquakeData';
 import { useInterval } from './hooks/useInterval';
+import { useDarkMode } from './hooks/useDarkMode'; 
+import DarkModeToggle from './components/DarkModeToggle';
 import MapView from './components/MapView';
 import ChartPanel from './components/ChartPanel';
 import FilterControls from './components/FilterControls';
@@ -22,6 +24,7 @@ function App() {
   const [lastUpdate, setLastUpdate] = useState(new Date());
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [activeChart, setActiveChart] = useState('all');
+  const [darkMode, toggleDarkMode] = useDarkMode();
 
   // Auto refresh every minute
   useInterval(() => {
@@ -62,7 +65,15 @@ function App() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>EpicenterHub</h1>
+      <div className={styles.headerTop}>
+          <h1 className={styles.title}>EpicenterHub</h1>
+          <DarkModeToggle 
+            darkMode={darkMode} 
+            toggleDarkMode={() => {
+            toggleDarkMode();
+  }} 
+/>
+        </div>
         <p className={styles.subtitle}>
           Visualizing recent seismic activity around the world
         </p>

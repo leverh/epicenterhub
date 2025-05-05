@@ -1,0 +1,41 @@
+.darkModeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.1rem solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+  }
+  
+  .darkModeButton:hover {
+    background-color: #f7fafc;
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    color: #4a5568;
+    transition: transform 0.3s ease;
+  }
+  
+  .darkModeButton:hover .icon {
+    transform: rotate(180deg);
+  }
+  
+  /* Dark mode styles */
+  .darkModeButton:global(.dark) {
+    border-color: #4a5568;
+  }
+  
+  .darkModeButton:global(.dark):hover {
+    background-color: #2d3748;
+  }
+  
+  .icon:global(.dark) {
+    color: #e2e8f0;
+  }
