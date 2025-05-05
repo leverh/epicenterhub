@@ -19,6 +19,7 @@ EpicenterHub transforms complex seismic data into visualizations, providing real
 ## Screenshots
 
 ![Landing page](./public/screenshot1.png)
+*Landing page*
 
 ![Advanced Charts](/public/screenshot2.png)
 *Advanced data visualizations and heatmaps*
