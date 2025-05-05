@@ -142,5 +142,5 @@ For any inquiries, please contact me directly.
 ---
 
 <div align="center">
-  Made with ❤️ using React
+  Made with 💀 using React
 </div>
