@@ -131,7 +131,7 @@ Real-time earthquake data from [USGS GeoJSON Feed](https://earthquake.usgs.gov/e
   
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. Copy or share - I really don't care 🖖✌️
 
 ## Contact
 
